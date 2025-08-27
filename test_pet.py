@@ -34,7 +34,7 @@ def test_find_by_status_200(status):
     }
 
     response = api_helpers.get_api_data(test_endpoint, params)
-    # TODO...
+    assert response.status_code == 200
 
 '''
 TODO: Finish this test by...
@@ -42,5 +42,5 @@ TODO: Finish this test by...
 2) Parameterizing the test for any edge cases
 '''
 def test_get_by_id_404():
-    # TODO...
+    assert response.status_code == 404
     pass
