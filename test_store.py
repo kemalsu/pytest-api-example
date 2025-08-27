@@ -13,4 +13,7 @@ TODO: Finish this test by...
 4) Validate the response message "Order and pet status updated successfully"
 '''
 def test_patch_order_by_id():
+    response = api_helpers.get_api_data(test_endpoint, params)
+    assert response.status_code == 200
+    assert "Order and pet status updated successfully" in response.text
     pass
